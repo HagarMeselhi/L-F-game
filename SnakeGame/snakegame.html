@@ -2,18 +2,41 @@
 <html>
   <head>
   	<title>Snake Game</title>
-	<!-- <link href="https://fonts.googleapis.com/css?family=Antic+Slab" rel="stylesheet"> -->
+
 	<link rel="stylesheet" href="snakegame.css">
 
   </head>
   <body>
 	<div id="Ys">Lets Start to Learn how to count <br> </div>
-	<div id="score">0</div>
+  <div id="score">0</div>
+  <div id="timer"></div>
+  <div id=gameover></div>
     <canvas id="snakeboard" width="600" height="600"></canvas>
 
     
   </body>
 
+  <script>  var time = 160;
+    setInterval(time1,1000);
+    function time1(){
+    time= time - 1;
+    document.getElementById('timer').innerHTML= "Time Left : " + time;
+    if(time <= 0){
+        var x = document.getElementById('timer');
+        x.style.fontSize="20px"
+        x.innerHTML= "Congratulations";
+        x.style.position="aboslute";
+        x.style.left=(window.innerWidth/4)+"px";
+        x.style.top=(window.innerHeight/4)+"px";
+        alert("Congratulations! YOU WON")
+
+        setTimeout(location="snakegame.html", 5000);
+    }
+    }
+    
+    
+    
+    </script>
   <script src="snakegame.js" > </script>
-  <script src="sounds.js" > </script>
+
 </html>
