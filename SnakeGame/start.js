@@ -1,4 +1,4 @@
-var one = new Audio("sounds/1.mp3");
+var one = new Audio();
 var two = new Audio();
 var three = new Audio();
 var four = new Audio();
@@ -63,5 +63,21 @@ o.addEventListener('click',function(e)
 var p = document.getElementById("ten");
 p.addEventListener('click',function(e)
 {ten.play();  });
+
+var z = document.getElementById("start");
+z.addEventListener('click',function(e)
+{location.replace('snakegame.html');  }
+);
+
+var x = document.getElementById("htplay");
+x.addEventListener('click',function(e)
+{location.replace('howtoplay.html');
+   });
+
+var g = document.getElementById("back");
+g.addEventListener('click',function(e)
+{location.replace('start.html');
+   });
+
 
 
