@@ -1,12 +1,4 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//     pTag = document.querySelector("div");
-//     newVal = document.createElement("p");
-//     newVal.innerHTML = '';
-//     pTag.appendChild(newVal);
-//   });
-
-
-  const board_border = 'Crimson';
+const board_border = 'Crimson';
   const board_background = "Bisque";
   const snake_col = 'Crimson';
   const snake_border = 'LightBlue';
@@ -44,7 +36,7 @@
   function main() {
   
       if (has_game_ended()) return;
-  
+   
       changing_direction = false;
       setTimeout(function onTick() {
       clear_board();
@@ -54,7 +46,7 @@
       
       // Repeat
       main();
-    }, 100)
+    }, 200)
   }
   
 
@@ -114,6 +106,8 @@
       const hitRightWall = snake[0].x > snakeboard.width - 20;
       const hitToptWall = snake[0].y < 0;
       const hitBottomWall = snake[0].y > snakeboard.height - 20;
+
+
       return hitLeftWall || hitRightWall || hitToptWall || hitBottomWall
     }
   
@@ -189,4 +183,13 @@
     }
 
     
-    
+//functtion gover()
+  // { if (has_game_ended())
+    //{
+      //ctx.drawImage(bang, 200, 200 , 50, 50);
+        //            ctx.font= "25px Georgia";
+          //          ctx.fillStyle = 'black';
+            //        ctx.fillText('Game Over, your score is ' + score, 160, canvas.height/2 -10);
+              //      over.play();
+    //}
+  //}
